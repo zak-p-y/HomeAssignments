@@ -9,7 +9,7 @@
 
 void printHello() {
 
-	std::cout << "Hello, world"<<std::endl;
+	std::cout << "Hello, world"<< std::endl;
 	while (true) {
 		std::string a;
 		std::cin >> a;
