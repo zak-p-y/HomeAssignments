@@ -12,7 +12,7 @@ void printHello() {
 	std::cout << "Hello, world"<< std::endl;
 	while (true) {
 		std::string a;
-		std::cin >> a;
+		std::getline(std::cin, a);
 		std::cout <<a<< std::endl;
 
 }
