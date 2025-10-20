@@ -1,0 +1,5 @@
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="f9d79c51-3274-3c00-8c54-cdbc31e1e548")}catch(e){}}();
+define(["exports","./e_file_viewer_static_scl_page_file"],(function(e,i){"use strict";const t={_POLLING:{},send_verification_email:(e,t,r,s,_)=>i.WebRequest({url:i.GetUrlForSendVerifyEmail(),data:{email:t,reason:r,signup_tag:_},success:()=>null==s?void 0:s(),subject_user:e}),check_verification:(e,t,r,s)=>i.SilentBackgroundRequest({url:i.GetUrlForIsEmailVerified(),data:{email:t},success:e=>"ok"===e?r():s(),subject_user:e}),listen_for_verification(e,i,t){const r=`${e}:${i}`;if(!this._POLLING[r])return this._POLLING[r]=!0,this._poll_for_verification(e,i,t)},_poll_for_verification(e,i,t){return this.check_verification(e,i,t,(()=>setTimeout((()=>this._poll_for_verification(e,i,t)),4e3)))}};e.EmailVerify=t}));
+//# sourceMappingURL=c_account_email_verify.js-vflXp9oJs.map
+
+//# debugId=f9d79c51-3274-3c00-8c54-cdbc31e1e548

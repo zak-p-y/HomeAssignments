@@ -1,0 +1,5 @@
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="ca022741-e360-3834-987c-3f7ca0682722")}catch(e){}}();
+define(["exports","./c_core_notify","./c_memoize-one","./c_core_i18n","react-dom","react","./c_spectrum_util_raf_throttle","./c_api_v2_routes_growth_provider","./e_core_exception","./c_src_sink_index","./c_bem","./c_lodash-es_lodash","./c_hive_schemas_sharing-request_access_user_events","metaserver/static/js/langpack","./c_init_data_edison"],(function(e,s,t,c,r,i,o,_,n,a,d,u,l,f,h){"use strict";e.ensureCookiesAreEnabled=function(){return!!t.Cookies.are_enabled()||(window===window.top&&s.require_css("/static/metaserver/static/css/notify-vflPup1uz.css").then((()=>{s.Notify.error(c.intl.formatMessage({id:"G39vbK",defaultMessage:"Unable to access strictly necessary cookies. The website might not function correctly."}))})),!1)}}));
+//# sourceMappingURL=c_edison_cookies_check.js-vfl5fP2dU.map
+
+//# debugId=ca022741-e360-3834-987c-3f7ca0682722

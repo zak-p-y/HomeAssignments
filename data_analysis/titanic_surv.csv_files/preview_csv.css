@@ -1,0 +1,29 @@
+.csv {
+    border-collapse: collapse;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.csv thead {
+    text-align: center;
+}
+
+.csv td,
+.csv th {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 5px;
+    min-width: 5em;
+}
+
+.csv tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.csv tr:nth-child(odd) {
+    background: #fff;
+}
+
+.csv tr:hover {
+    background: #b2cdff;
+    cursor: cell;
+}
