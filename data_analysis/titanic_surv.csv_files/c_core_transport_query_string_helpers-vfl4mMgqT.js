@@ -1,5 +1,0 @@
-!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="1355d88f-28eb-3349-879c-598bca091ccf")}catch(e){}}();
-define(["exports"],(function(t){"use strict";const n=["gclid","oqa","trigger","_tk","_camp","_ad","_net","_kw","utm_campaign","utm_content","utm_medium","utm_source","utm_term","cont"];function e(t){const n={};if(t.length){const e=t.substring(1).replace(/&amp;/g,"&").split("&");for(const t of e){let[e,r]=t.split("=");e&&r&&(e=e.trim(),r=r.trim(),e.length&&r.length&&(n[e]=decodeURIComponent(r.replace(/\+/g," "))))}}return n}function r(t){const r=t||e(function(t=window){return t.location.search}());return c=r,n.reduce(((t,n)=>(c.hasOwnProperty(n)&&(t[n]=c[n]),t)),{});var c}t.getTrackingParamsAsJSON=function(){const t=r();return JSON.stringify(t)},t.parseQueryString=e}));
-//# sourceMappingURL=c_core_transport_query_string_helpers.js-vfl13SE86.map
-
-//# debugId=1355d88f-28eb-3349-879c-598bca091ccf

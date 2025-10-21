@@ -1,5 +1,0 @@
-{
-    "python-envs.pythonProjects": [],
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-}

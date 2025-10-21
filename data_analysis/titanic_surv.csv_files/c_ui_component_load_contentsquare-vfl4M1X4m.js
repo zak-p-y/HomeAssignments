@@ -1,5 +1,0 @@
-!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="bc22640d-2ee2-3227-af21-370b28502af5")}catch(e){}}();
-define(["require","exports","./c_api_v2_routes_growth_provider","./e_core_exception"],(function(e,n,o,t){"use strict";const a=void 0!==self&&self?self:window;a._uxa=a._uxa||[];const i=a._uxa,s=async()=>{"undefined"!=typeof window&&(i.push(["setPath",window.location.pathname+window.location.hash.replace("#","?__")]),await new Promise((function(n,o){e(["./c_contentsquare"],n,o)})))};n.initContentsquare=s,n.loadContentsquare=e=>{"warp_page_edison"===o.getPageName()&&e.analytics&&s()}}));
-//# sourceMappingURL=c_ui_component_load_contentsquare.js-vflsnmOoy.map
-
-//# debugId=bc22640d-2ee2-3227-af21-370b28502af5
