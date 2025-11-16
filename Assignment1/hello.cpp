@@ -13,7 +13,7 @@ void printHello() {
 	while (true) {
 		std::string a;
 		std::getline(std::cin, a);
-		std::cout <<a<< std::endl;
+		std::cout << "Hello, " << a << std::endl;
 
 }
 
