@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -g
+CXXFLAGS = -std=c++17 -g -Werror -Wpedantic -Wall -Wextra
 TARGET = main
 TEST_TARGET = test
 SOURCES = Autobot.cpp Battery.cpp Car.cpp Decepticon.cpp main.cpp Transformer.cpp Weapon.cpp
