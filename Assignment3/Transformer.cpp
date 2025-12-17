@@ -2,8 +2,7 @@
 
 
 Transformer::Transformer(int lev, int f, int am, Weapon* wp) 
-    : _level(lev), _fuel(f), _ammo(am), weapon(wp) {}
-
+    : _level(lev), battery(), weapon(wp), _fuel(f), _ammo(am) {}
 
 void Transformer::set_level(int value) {
     _level = value;

@@ -1,7 +1,7 @@
 #include "Decepticon.h"
 
 Decepticon::Decepticon(int helm, int w, int lev, int f, int am, Weapon* wp) 
-    : helmet(helm), weight(w), Transformer(lev, f, am, wp) {}
+    : Transformer(lev, f, am, wp),  helmet(helm), weight(w) {}
 
 void Decepticon::set_helmet(int value) {
     helmet = value;

@@ -1,7 +1,7 @@
 #include "Car.h"
 
 Car::Car(int sp, std::string col, int lev, int f, int am, Weapon* wp) 
-    : speed(sp), color(col), Transformer(lev, f, am, wp) {}
+    : Transformer(lev, f, am, wp), speed(sp), color(col) {}
 
 void Car::set_speed(int value) {
     speed = value;

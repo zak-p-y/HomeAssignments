@@ -9,7 +9,7 @@
 TEST(BatteryTest, SetCharge) {
 	Battery battery;
 	battery.set_charge(50);
-	EXPECT_EQ(battey.get_charge(), 50);
+	EXPECT_EQ(battery.get_charge(), 50);
 }
 TEST(WeaponTest, GetName) {
 	Weapon weapon;

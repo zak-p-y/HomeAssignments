@@ -1,7 +1,7 @@
 #include "Autobot.h"
 
 Autobot::Autobot(int a, std::string col, int lev, int f, int am, Weapon* wp) 
-    : arm(a), color(col), Transformer(lev, f, am, wp) {}
+    : Transformer(lev, f, am, wp), arm(a), color(col) {}
 
 void Autobot::set_arm(int value) {
     arm = value;
