@@ -2,12 +2,14 @@
 
 Battery::Battery(int chrg) : charge(chrg) {}
 
-void Battery::set_charge(int value) {
-	charge = value;
+void Battery::set_charge(int value)
+{
+    charge = value;
 }
 
-int Battery::get_charge () const {
-            return charge;
+int Battery::get_charge () const
+{
+    return charge;
 }
 
 
