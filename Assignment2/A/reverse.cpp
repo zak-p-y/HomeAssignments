@@ -18,7 +18,7 @@ void Reverse(std::string file_path) {
     char* file_array = new char[filesize];
     infile.read(file_array, filesize);
     std::reverse(file_array, file_array + filesize);  
-    std:: ofstream outfile("outfile.txt", std::ios::binary | std::ios::out);
+    std::ofstream outfile("outfile.txt", std::ios::binary | std::ios::out);
     outfile.write(file_array, filesize);
 
     delete[] file_array;

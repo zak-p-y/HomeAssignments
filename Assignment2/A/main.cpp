@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "2a.h"
+#include "reverse.h"
 
 int main() {
     std::string file_path;

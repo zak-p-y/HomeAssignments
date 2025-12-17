@@ -1,6 +1,6 @@
-PROJECT = 2a
+PROJECT = main
 CXX = g++
-CXXFLAGS = -Wall -Wextra
+CXXFLAGS = -Wall -Wextra -std=c++17
 SRC = main.cpp reverse.cpp
 OBJ = $(SRC:.cpp=.o)
 
