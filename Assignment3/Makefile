@@ -17,8 +17,9 @@ $(TARGET): $(OBJECTS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-test: $(TEST_OBJECTS)
-	$(CXX) $(TEST_OBJECTS) -o $(TEST_TARGET)
+test: Autobot.o Battery.o Car.o Decepticon.o Transformer.o Weapon.o test.o
+	g++ test.o Autobot.o Battery.o Car.o Decepticon.o Transformer.o Weapon.o -lgtest -lgtest_main -pthread -o test
+
 
 clean:
 	rm -f *.o $(TARGET) $(TEST_TARGET)
