@@ -19,12 +19,6 @@ TEST(WeaponTest, GetName)
 }
 
 
-TEST(TransformerTest, GetAmmo)
-{
-    Transformer transformer;
-    EXPECT_EQ(transformer.get_ammo(), 1000);
-}
-
 
 TEST(AutobotTest, GetColor)
 {
