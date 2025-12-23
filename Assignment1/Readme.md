@@ -1,6 +1,6 @@
 # Assignment 1
 ## Author
- Зак Павел, 25.Б81-мм
+Зак Павел , 25.Б81-мм
 ## 
 st142062@student.spbu.ru
 ## Description
