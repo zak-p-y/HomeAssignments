@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <stdexcept>
-
+#include <utility>
 
 template<typename T>  // T - type
 
@@ -20,11 +20,11 @@ n(n_size),
 data(m_size, std::vector<T>(n_size, T()))
 {}
 	
-T& operator()(int m, int n) {return data[m][n];}
-const T& operator()(int m, int n) const {return data[m][n];}
+T& operator()(int i, int j) { return data[i][j]; }
+const T& operator()(int i, int j) const { return data[i][j]; }
 
-int rows() {return this->m;}
-int cols() {return this->n;}
+int rows() const {return this->m;}
+int cols() const {return this->n;}
 
 
 
@@ -108,7 +108,20 @@ Matrix<T> operator*(const Matrix<T>& other) const {
     return Matrix<T>(*this) *= other; 
 }
 
+Matrix<T> operator*(const T& a) const {
+    return Matrix<T>(*this) *= a;
+}
 
+
+
+bool operator==(const Matrix<T>& other) const {
+    if (m != other.m || n != other.n) return false;
+    for (int i = 0; i < m; ++i)
+        for (int j = 0; j < n; ++j)
+            if (data[i][j] != other.data[i][j])
+                return false;
+    return true;
+}
 
 };
 

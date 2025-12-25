@@ -1,14 +1,15 @@
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
 
+
 #include <iostream>
 #include <numeric>
 #include <stdexcept>
 
 class Rational {
 private:
-    long long num;
-    long long den;
+    int num;
+    int den;
 
     void simplify() {
         if (den == 0) {
@@ -18,7 +19,7 @@ private:
             num = -num;
             den = -den;
         }
-        long long common = std::gcd(std::abs(num), den);
+        int common = std::gcd(std::abs(num), den);
         num /= common;
         den /= common;
     }
@@ -27,15 +28,15 @@ public:
     Rational() : num(0), den(1) {}
 
 // need for initialization
-    Rational(long long n) : num(n), den(1) {}
+    Rational(int n) : num(n), den(1) {}
 
 //main constructure
-    Rational(long long n, long long d) : num(n), den(d) {
+    Rational(int n, int d) : num(n), den(d) {
         simplify();
     }
 
-    long long get_num() const { return num; }
-    long long get_den() const { return den; }
+    int get_num() const { return num; }
+    int get_den() const { return den; }
 
 
     Rational& operator+=(const Rational& other) {
