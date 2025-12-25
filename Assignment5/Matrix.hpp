@@ -1,10 +1,8 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-#include <iostream> 
-#include <string> 
 #include <vector>
-
+#include <stdexcept>
 
 
 template<typename T>  // T - type
@@ -16,10 +14,19 @@ private:
 	std::vector<std::vector<T>> data;
 
 public: 
-	Matrix(int m_size, int n_size) :  m(m_size), n(n_size)  {}
+	Matrix(int m_size, int n_size) : 
+m(m_size), 
+n(n_size),
+data(m_size, std::vector<T>(n_size, T()))
+{}
 	
-	 T& operator()(int m, int n) {return data[m][n];}
-	const T& operator()(int m, int n) const {return data[m][n];}
+T& operator()(int m, int n) {return data[m][n];}
+const T& operator()(int m, int n) const {return data[m][n];}
+
+int rows() {return this->m;}
+int cols() {return this->n;}
+
+
 
 
 // multipy scalar
@@ -34,7 +41,72 @@ public:
 	}
 
 
+// matrix sum
 
+Matrix<T>& operator+=(const Matrix<T>& other) {
+	if ( (*this).m != other.m || (*this).n != other.n) {
+	throw std::invalid_argument("sizes of matrix don't math");
+}
+
+	for (int row=0; row<m; row++) {
+		for (int col=0; col<n; col++) {
+			(*this)(row, col) +=  other(row, col);
+			} 
+		}
+	return *this;
+	}
+
+
+
+// Matrix multipy
+
+Matrix<T>& operator*=(const Matrix<T>  &other) {
+	if (this->n != other.m) {throw std::invalid_argument("shapes of matrix don't fit");}  
+	
+
+	Matrix<T> new_matrix(this->m, other.n);
+
+	// iterate i,j new matirx
+	for (int i=0; i<new_matrix.m; i++) {
+		for (int j=0; j<new_matrix.n; j++) {
+			for (int k=0; k<this->n; k++) {
+				new_matrix(i,j) +=  this->data[i][k] * other.data[k][j];
+
+			}
+		}
+	}
+
+	*this = std::move(new_matrix);
+	return *this;
+}
+
+
+
+
+
+// transp()
+Matrix<T> transp() const {
+Matrix<T> new_matrix(this->n, this->m);
+for (int i=0; i<this->m; i++) {
+	for (int j=0; j<this->n; j++) {
+		new_matrix(j, i) = (*this)(i, j);
+	}
+}
+
+return new_matrix;
+}
+
+
+
+Matrix<T> operator+(const Matrix<T>& other) const {
+    Matrix<T> result = *this;
+    result += other;
+    return result;
+}
+
+Matrix<T> operator*(const Matrix<T>& other) const {
+    return Matrix<T>(*this) *= other; 
+}
 
 
 
@@ -47,6 +119,6 @@ public:
 
 
 
-
-
 #endif
+
+
