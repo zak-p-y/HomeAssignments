@@ -7,21 +7,17 @@
 
 int main()
 {
-    Weapon laser("Laser Gun");
-    Weapon plasma("Plasma Gun");
-    Weapon rocket("Rocket Gun");
-
-    Autobot a(2, "Blue", 1, 80, 200, &laser);
+    Autobot a(2, "Blue", 1, 80, 200, new Weapon("Laser Gun"));
     a.printInfo();
     a.specialAction();
     std::cout << a << std::endl;
 
-    Decepticon d(3, 500, 2, 100, 300, &plasma);
+    Decepticon d(3, 500, 2, 100, 300, new Weapon("Plasma Gun"));
     d.printInfo();
     d.specialAction();
     std::cout << d << std::endl;
 
-    Car c(120, "Yellow", 1, 60, 150, &rocket);
+    Car c(120, "Yellow", 1, 60, 150, new Weapon("Rocket Gun"));
     c.printInfo();
     c.specialAction();
     std::cout << c << std::endl;
@@ -34,15 +30,15 @@ int main()
     ptr->printInfo();
 
     std::vector<Transformer*> robots;
-    robots.push_back(new Autobot(1, "Red"));
-    robots.push_back(new Autobot(2, "Green"));
-    robots.push_back(new Autobot(3, "Blue"));
-    robots.push_back(new Decepticon(1, 100));
-    robots.push_back(new Decepticon(2, 200));
-    robots.push_back(new Decepticon(3, 300));
-    robots.push_back(new Car(50, "Black"));
-    robots.push_back(new Car(60, "White"));
-    robots.push_back(new Car(70, "Gray"));
+    robots.push_back(new Autobot(1, "Red", 0, 10, 1000, new Weapon("Blaster")));
+    robots.push_back(new Autobot(2, "Green", 0, 10, 1000, new Weapon("Blaster")));
+    robots.push_back(new Autobot(3, "Blue", 0, 10, 1000, new Weapon("Blaster")));
+    robots.push_back(new Decepticon(1, 100, 0, 10, 1000, new Weapon("Null Ray")));
+    robots.push_back(new Decepticon(2, 200, 0, 10, 1000, new Weapon("Null Ray")));
+    robots.push_back(new Decepticon(3, 300, 0, 10, 1000, new Weapon("Null Ray")));
+    robots.push_back(new Car(50, "Black", 0, 10, 1000, new Weapon("Bumper")));
+    robots.push_back(new Car(60, "White", 0, 10, 1000, new Weapon("Bumper")));
+    robots.push_back(new Car(70, "Gray", 0, 10, 1000, new Weapon("Bumper")));
 
     for (auto r : robots)
     {

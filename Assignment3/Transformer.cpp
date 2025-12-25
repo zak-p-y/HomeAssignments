@@ -16,7 +16,6 @@ Transformer::Transformer(Transformer&& other) noexcept
 }
 
 
-// В Transformer.cpp
 
 void Transformer::set_level(int value) {
     _level = value;
@@ -81,7 +80,7 @@ int Transformer::get_ammo() const
 
 Transformer::~Transformer()
 {
-//    delete weapon;
+    delete weapon;
 }
 
 std::ostream& operator<<(std::ostream& os, const Transformer& t)
@@ -96,3 +95,5 @@ void Transformer::specialAction()
 {
     std::cout << "Transformer::specialAction" << std::endl;
 }
+
+
