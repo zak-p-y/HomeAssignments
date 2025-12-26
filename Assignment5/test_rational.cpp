@@ -1,3 +1,9 @@
+/*
+* Pavel Zak
+* st142062@student.spbu.ru
+HomeAssignment5
+*/
+
 #include <gtest/gtest.h>
 #include "Rational.hpp"
 

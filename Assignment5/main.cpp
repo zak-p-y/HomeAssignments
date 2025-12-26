@@ -1,3 +1,9 @@
+/*
+* Pavel Zak
+* st142062@student.spbu.ru
+HomeAssignment5
+*/
+
 #include <iostream>
 #include "Matrix.hpp"
 #include "Rational.hpp"

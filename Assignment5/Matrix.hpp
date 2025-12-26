@@ -1,3 +1,10 @@
+/*
+* Pavel Zak
+* st142062@student.spbu.ru
+HomeAssignment5
+*/
+
+
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
