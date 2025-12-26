@@ -2,6 +2,9 @@ COMPILER = g++
 FLAGS = -Wall -g -std=c++17
 GTEST_FLAGS = -lgtest -lgtest_main -pthread
 
+RATIONAL_SRC = Rational.cpp
+RATIONAL_OBJ = $(RATIONAL_SRC:.cpp=.o)
+
 CORE_SRC = main.cpp
 CORE_OBJ = $(CORE_SRC:.cpp=.o)
 
@@ -18,10 +21,10 @@ all: $(TARGET) $(TEST_TARGET)
 test: $(TEST_TARGET)
 	./$(TEST_TARGET)
 
-$(TARGET): $(CORE_OBJ)
+$(TARGET): $(CORE_OBJ) $(RATIONAL_OBJ)
 	$(COMPILER) $(FLAGS) -o $@ $^
 
-$(TEST_TARGET): $(UNIT_OBJ)
+$(TEST_TARGET): $(UNIT_OBJ) $(RATIONAL_OBJ)
 	$(COMPILER) $(FLAGS) -o $@ $^ $(GTEST_FLAGS)
 
 %.o: %.cpp
