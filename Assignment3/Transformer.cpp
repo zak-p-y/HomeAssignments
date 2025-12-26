@@ -31,6 +31,10 @@ void Transformer::set_weapon(const std::string& new_name) {
     }
 }
 
+void Transformer::set_weapon(Weapon* wp) {
+    weapon = wp;
+}
+
 void Transformer::set_fuel(int value) {
     _fuel = value;
 }
