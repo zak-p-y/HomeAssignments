@@ -19,6 +19,7 @@ public:
     void set_level(int value);
     void set_battery(int value);
     void set_weapon(const std::string& new_name);
+    void set_weapon(Weapon* wp);
     void set_fuel(int value);
     void set_ammo(int value);
     

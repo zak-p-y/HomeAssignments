@@ -12,11 +12,16 @@ void Transformer::set_battery(int value) {
     battery.set_charge(value);
 }
 
-void Transformer::set_weapon(const std::string& new_name) {
-    if (weapon != nullptr) {
-        weapon->set_name(new_name);
-    }
+//void Transformer::set_weapon(const std::string& new_name) {
+//    if (weapon != nullptr) {
+  //      weapon->set_name(new_name);
+ //   }
+//}
+
+void Transformer::set_weapon(Weapon* wp) {
+    weapon = wp; 
 }
+
 
 void Transformer::set_fuel(int value) {
     _fuel = value;
